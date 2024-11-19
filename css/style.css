@@ -1,2 +1,156 @@
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-margin-top: 70px;
+    scroll-behavior: smooth;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: white;
+  }
+  
+  body {
+    font-size: 16px;
+    background-color: black;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  
+  h3 {
+    font-size: 1.5em;
+  }
+  
+  header {
+    background-color: rgba(0, 0, 0, 0.603);
+    backdrop-filter: blur(16px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    height: 70px;
+  }
+  
+  #menu-open,
+  #menu-close {
+    cursor: pointer;
+    width: 30px;
+    display: none;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+      hue-rotate(80deg) brightness(104%) contrast(101%);
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .logo {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+  }
+  
+  /* Button */
+  
+  .btn {
+    background-color: white;
+    padding: 10px 15px;
+    color: black;
+    border-radius: 15px;
+    text-decoration: none;
+    box-shadow: 0px 0px 2px rgb(255, 255, 255);
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  
+  .btn-blue {
+    background-color: #11172e;
+    color: white;
+  }
+  
+  /* Hero */
+  
+  .hero-container {
+    background: linear-gradient(black, #11172e);
+    padding: 50px;
+    text-align: center;
+    height: calc(100dvh - 70px);
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-content {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 50px;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .hero-content img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    image-rendering: smooth;
+    max-width: 550px;
+  }
+  
+  .hero-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    align-items: start;
+    gap: 20px;
+    color: white;
+  }
+  
+  .hero-item h2 {
+    font-size: 1.4em;
+  }
 
