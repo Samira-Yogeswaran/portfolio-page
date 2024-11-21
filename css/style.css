@@ -154,3 +154,182 @@
     font-size: 1.4em;
   }
 
+
+/* Containers */
+
+.container-full {
+  background-color: #e4f6ff;
+
+  background-color: #020921;
+  color: white;
+}
+
+.container-full2 {
+  background-color: #11172e;
+  color: white;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+section {
+  text-align: center;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgb(24, 24, 24);
+
+  color: inherit;
+}
+
+section p {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* About me */
+
+#about-me-text {
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+#about-me-text:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+/* Interests */
+
+.interests {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 20px auto;
+}
+
+.interest {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #11172e;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.interest:hover {
+  transform: scale(1.05);
+  background-color: black;
+}
+
+.interest img {
+  width: 100%;
+  max-width: 50px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+    hue-rotate(80deg) brightness(104%) contrast(101%);
+}
+
+.languages {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 20px auto;
+}
+
+.language {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #11172e;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.language:hover {
+  transform: scale(1.05);
+  background-color: black;
+}
+
+.language img {
+  width: 100%;
+  max-width: 50px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Skills */
+
+.skills {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 20px auto;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  background-color: #020921;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.skill:hover {
+  border-radius: 20px;
+  background-color: black;
+}
+
+.skill:hover p {
+  opacity: 1;
+}
+
+.skill p {
+  position: absolute;
+  top: 105%;
+  background-color: #020921;
+  z-index: 10;
+  left: 0;
+  opacity: 0;
+  padding: 10px;
+  border-radius: 20px;
+  transition: 0.3s;
+  font-size: 0.8em;
+  width: 100%;
+  text-align: center;
+}
+
+.skill img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  max-width: 50px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+    hue-rotate(80deg) brightness(104%) contrast(101%);
+}
