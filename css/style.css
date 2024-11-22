@@ -333,3 +333,196 @@ section p {
   filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
     hue-rotate(80deg) brightness(104%) contrast(101%);
 }
+
+#skills h3,
+#about-me h3 {
+  margin: 25px auto;
+}
+
+/* Projects */
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.project {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.project-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0000001e;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  padding: 20px;
+  z-index: 1;
+  color: white;
+  font-size: 1.4em;
+}
+
+.project img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 1;
+  color: white;
+  padding: 20px;
+
+  text-align: center;
+}
+
+.project-overlay p {
+  max-width: 400px;
+  padding-top: 40px;
+}
+
+/* Work Experience */
+
+.work-experiences {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.work-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: white;
+  border-radius: 20px;
+  transition: opacity 1.4s ease-out, transform 0.6s, background-color 0.3s;
+
+  padding: 20px;
+  text-align: start;
+  background-color: #11172e;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.work-experience:nth-child(2) {
+  transition-delay: opacity 0.4s;
+}
+
+.work-experience:nth-child(3) {
+  transition-delay: opacity 0.8s;
+}
+
+.visible {
+  opacity: 1 !important;
+}
+
+.work-experience:hover {
+  background-color: black;
+  transform: scale(1.01);
+}
+
+.work-experience p {
+  text-align: start;
+  margin: 0;
+}
+
+#work-experience-popup,
+#project-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.3s;
+  padding: 20px;
+}
+
+#work-experience-info,
+#project-info {
+  position: relative;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 600px;
+  text-align: start;
+  width: 100%;
+}
+
+#modal-text,
+#project-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#work-experience-info ul,
+#project-info ul {
+  margin-left: 20px;
+}
+
+.work-open,
+.project-open {
+  pointer-events: auto !important;
+  opacity: 1 !important;
+}
+
+#works-close,
+#project-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Educations */
+
+.educations {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 20px auto;
+}
