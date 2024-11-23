@@ -673,3 +673,193 @@ footer {
   color: white;
   text-align: center;
 }
+
+.copyright {
+  background-color: rgb(5, 5, 5);
+  padding: 20px;
+  color: white;
+}
+
+.footer-infos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+  align-items: center;
+  width: 100%;
+  justify-items: center;
+  gap: 20px;
+  max-width: 700px;
+  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: start;
+}
+
+.footer-info img {
+  max-width: 25px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+    hue-rotate(80deg) brightness(104%) contrast(101%);
+}
+
+.footer-info a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1025px) {
+  body {
+    overflow: auto !important;
+  }
+  nav {
+    display: flex !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  #menu-open,
+  #menu-close {
+    display: block;
+  }
+
+  #menu-close {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+  }
+
+  nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+  }
+
+  .hero-container {
+    min-height: calc(100dvh - 70px);
+    height: auto;
+    padding: 20px;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hero-content img {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .hero-item {
+    text-align: center;
+    align-items: center;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .projects {
+    gap: 20px;
+  }
+
+  .educations,
+  .work-experiences {
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .skills,
+  .projects {
+    grid-template-columns: 12fr;
+  }
+
+  .skill p {
+    background-color: #333;
+    color: white;
+    font-size: 0.8em;
+    top: 90%;
+  }
+
+  .contact-infos {
+    grid-template-columns: 12fr;
+  }
+
+  .contact-popup {
+    padding: 0;
+    overflow: scroll;
+    align-items: flex-start;
+  }
+
+  .contact-form {
+    max-width: 100%;
+    min-height: 100dvh;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .interests {
+    grid-template-columns: 6fr 6fr;
+  }
+
+  .languages {
+    grid-template-columns: 12fr;
+  }
+
+  .footer-infos {
+    grid-template-columns: 12fr;
+  }
+
+  .footer-info {
+    text-align: start;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+}
